@@ -10,39 +10,44 @@
  */
 
 var MevenBoxApp = angular
-    .module('mevenboxAngApp', [
-      'ngAnimate',
-      'ngAria',
-      'ngCookies',
-      'ngMessages',
-      'ngResource',
-      'ngRoute',
-      'ngSanitize',
-      'ngTouch',
-      'mevenBoxControllers',
+  .module('mevenboxAngApp', [
+    'ngAnimate',
+    'ngAria',
+    'ngCookies',
+    'ngMessages',
+    'ngResource',
+    'ngRoute',
+    'ngSanitize',
+    'ngTouch',
+    'mevenBoxControllers',
 
-    ])
-    .config(function ($routeProvider) {
-      $routeProvider
-          .when('/', {
-            templateUrl: 'views/main.html',
-            controller: 'MainCtrl',
-            controllerAs: 'main'
-          })
-          .when('/connect', {
-            templateUrl: '../views/connect.html',
-            controller: 'ConnectCtrl',
-            controllerAs: 'connect'
-          })
-          .when('/loading', {
-            templateUrl: '../views/loading.html',
-            controller: 'ConnectCtrl',
-            controllerAs: 'connect'
-          })
-          .otherwise({
-            redirectTo: '/'
-          });
-    });
+  ])
+  .config(function ($routeProvider) {
+    $routeProvider
+      .when('/', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main'
+      })
+      .when('/connect', {
+        templateUrl: '../views/connect.html',
+        controller: 'ConnectCtrl',
+        controllerAs: 'connect'
+      })
+      .when('/loading', {
+        templateUrl: '../views/loading.html',
+        controller: 'ConnectCtrl',
+        controllerAs: 'connect'
+      })
+      .when('/info', {
+        templateUrl: '../views/info.html',
+        controller: 'InfoCtrl',
+        controllerAs: 'info'
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
+  });
 
 
 MevenBoxApp.directive('netmask',function(){

@@ -46,7 +46,7 @@
 
 <!-- <div class="msg msg-default">
   Hello world!
-</div> -->
+</div>
 
 <div class="msg msg-alert">
   <div class="row">
@@ -58,24 +58,25 @@
     </div>
   </div>
 </div>
-
+-->
 <div class="container">
   <div class="device-options clearfix">
     <div class="pull-left">
       <h4 class="m-none">
-						<span ng-show="status.network.interfaces.state.wlan0">
-							WiFi IP: <strong>{{status.network.interfaces.state.wlan0}}</strong>
+
+						<span ng-show="status.network.interfaces.default.state.wlan0">
+							WiFi IP: <strong>{{status.network.interfaces.default.state.wlan0}}</strong>
 						</span>
-						<span class="ml-10" ng-show="status.network.interfaces.state.eth0">
-							LAN IP: <strong>{{status.network.interfaces.state.eth0}}</strong>
+						<span class="ml-10" ng-show="status.interfaces.default.default.state.eth0">
+							LAN IP: <strong>{{status.network.interfaces.default.state.eth0}}</strong>
 						</span>
       </h4>
     </div>
     <hr class="visible-sm visible-xs" />
     <div class="pull-right">
-      <a class="btn btn-default round" href=""><i class="fa fa-info mr-5 hidden-xs"></i>
+      <a class="btn btn-default round" href="/#/info"><i class="fa fa-info mr-5 hidden-xs"></i>
         Info</a>
-      <a class="btn btn-default round" href=""><i class="fa fa-refresh mr-5 hidden-xs"></i>
+      <a class="btn btn-default round" ng-click="main.reboot()"><i class="fa fa-refresh mr-5 hidden-xs"></i>
         Reboot Device</a>
       <a class="btn btn-default round" href=""><i class="fa fa-upload mr-5 hidden-xs"></i>
         Update Device</a>
@@ -185,7 +186,7 @@
             <div ng-controller="FormWifiController">
               <!-- <pre>form = {{wlan | json}}</pre>
                <pre>master = {{master | json}}</pre>-->
-              <form  class="form-horizontal simple-form"  novalidate  name="wlanForm">
+              <form  class="form-horizontal simple-form"    name="wlanForm">
 
 
 
