@@ -97,7 +97,7 @@ mevenBoxControllers.controller('FormWifiController', ['$scope', '$http','$interv
         $scope.master = angular.copy(wlan);
         $scope.master.iface='wlan';
         console.log('mother fucker',wlan);
-        $http.post('/someUrl', {msg:$scope.master}).success(dataPosted);
+        $http.post(hostname+'/api/network/setup/', {msg:$scope.master}).success(dataPosted);
 
       };
 
@@ -127,7 +127,7 @@ mevenBoxControllers.controller('FormEthController', ['$scope', '$http','$interva
         $scope.master = angular.copy(eth);
         $scope.master.iface='eth';
         console.log('mother fucker',eth);
-        $http.post('/someUrl', {msg:$scope.master}).success(dataPosted);
+        $http.post(hostname+'/api/network/setup/', {msg:$scope.master}).success(dataPosted);
 
       };
 
