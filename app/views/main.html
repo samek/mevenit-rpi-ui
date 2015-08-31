@@ -72,7 +72,7 @@
   </div>
   <hr class="mb-60" />
   <div class="row">
-    <div class="col-xs-8 col-xs-offset-2">
+    <div class="col-sm-8 col-sm-offset-2">
       <div class="row">
         <div class="col-md-6">
           <div>
@@ -102,7 +102,8 @@
               <hr class="visible-xs" />
 
                 <div ng-show="eth.dhcp == '-1'">
-                  <div class="form-group" >
+                  <div class="form-horizontal">
+                    <div class="form-group" >
                     <label  class="col-sm-4 control-label text-light">IP</label>
                     <div class="col-sm-8">
                       <input type="text" ng-model="eth.ip"  ipaddress class="form-control"  name="ip" ng-model-options="{ debounce: 500 }" placeholder="">
@@ -130,11 +131,18 @@
                       <span ng-show="ethForm.dns.$invalid">Wrong dns  address!</span>
                     </div>
                   </div>
+                  </div>
                 </div>
-              <div class="form-group">
-                <input class="btn btn-default" type="submit" ng-click="reset()" value="reset" />
-                <input class="btn btn-primary ml-10" type="submit" ng-click="update(eth)" value="Save" />
+              <div class="form-horizontal">
 
+                <div class="form-group">
+                  <label  class="col-sm-4 control-label text-light hidden-xs">&nbsp;</label>
+                  <div class="col-sm-8">
+                    <input class="btn btn-default" type="submit" ng-click="reset()" value="reset" />
+                  <input class="btn btn-primary ml-10" type="submit" ng-click="update(eth)" value="Save" />
+                  </div>
+
+              </div>
               </div>
               </form>
             </div>
@@ -146,7 +154,7 @@
               <div class="col-sm-8">
                 <h3 class="m-none"><strong>Wireless</strong> Network</h3>
               </div>
-              <hr class="visible-xs" />
+              <!-- <hr class="visible-xs" /> -->
               <!--  <div class="col-sm-4 cleafix">
                   <div class="clearfix pull-right">
                     <div class="pull-left">
@@ -171,7 +179,7 @@
                 <div  class="form-group">
                   <label class="col-sm-4 control-label text-light">Wireless </label>
                   <div class="col-sm-8">
-                    <div class="btn-group text-left">
+                    <div class="btn-group text-left block">
 
 
 
@@ -187,8 +195,11 @@
                 </div>
 
                 <div class="form-group" ng-show="wlan.name">
-                  <input class="btn btn-default" type="submit" ng-click="reset()" value="reset" />
+                  <label  class="col-sm-4 control-label text-light hidden-xs">&nbsp;</label>
+                  <div class="col-sm-8">
+                    <input class="btn btn-default" type="submit" ng-click="reset()" value="reset" />
                   <input class="btn btn-primary ml-10" type="submit" ng-click="update(wlan)" value="Save" />
+                  </div>
 
                 </div>
 
@@ -202,22 +213,20 @@
           <p>Coonect device with Your meven.it account.</p>
           <a class="btn btn-primary" href="/#/connect"><i class="icon-user mr-5"></i>Connect Your account</a>
         </div>
-        <hr class="visible-xs mt-40" />
+        <!-- <hr class="visible-xs mt-40" /> -->
       </div>
     </div>
   </div>
 </div>
 
 <footer class="footer">
-  <div class="footer-content clearfix">
-    <div class="pull-left hidden-xs">
-      <small class="text-muted block mt-20">
-        ©2015 <strong>meven</strong>.it
+  <div class="footer-content text-center">
+     <small class="text-muted block">
+        ©2015 <strong>MEVEN</strong>.IT
       </small>
-    </div>
-    <div class="pull-right">
+   <!--  <div class="pull-right">
       <a class="btn btn-default" href="#"><i class="fa fa-close mr-5" ></i>CANCEL</a><a class="btn btn-primary ml-10" href="#"><i class="fa fa-check mr-5"></i>SAVE</a>
-    </div>
+    </div> -->
   </div>
 </footer>
 
