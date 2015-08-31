@@ -34,6 +34,11 @@ var MevenBoxApp = angular
             controller: 'ConnectCtrl',
             controllerAs: 'connect'
           })
+          .when('/loading', {
+            templateUrl: '../views/loading.html',
+            controller: 'ConnectCtrl',
+            controllerAs: 'connect'
+          })
           .otherwise({
             redirectTo: '/'
           });

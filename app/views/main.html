@@ -44,6 +44,21 @@
   </div>
 </nav>
 
+<!-- <div class="msg msg-default">
+  Hello world!
+</div> -->
+
+<div class="msg msg-alert">
+  <div class="row">
+    <div class="col-xs-8">
+      Hello world!
+    </div>
+    <div class="col-xs-4 text-right">
+      <a class="btn btn-white" href="#">Close</a>
+    </div>
+  </div>
+</div>
+
 <div class="container">
   <div class="device-options clearfix">
     <div class="pull-left">
@@ -70,21 +85,18 @@
         Factory Reset</a>
     </div>
   </div>
-  <hr class="mb-60" />
+  <hr class="mb-40" />
   <div class="row">
-    <div class="col-sm-8 col-sm-offset-2">
-      <div class="row">
-        <div class="col-md-6">
-          <div>
-            <div ng-controller="FormEthController">
-             <pre>form = {{eth | json}}</pre>
-              <pre>master = {{master | json}}</pre>
+    <div class="col-sm-4">
+       <div class="panel panel-default">
+            <div class="panel-body">
+              <div ng-controller="FormEthController">
+             <!-- <pre>form = {{eth | json}}</pre>
+              <pre>master = {{master | json}}</pre> -->
             <div class="row mb-20">
               <div class="col-sm-8">
                 <h3 class="m-none"><strong>Wired</strong> Network</h3>
               </div>
-
-
                 <form  class="form-horizontal simple-form"    name="ethForm">
                 <hr class="visible-xs" />
                 <div class="col-sm-4 cleafix">
@@ -131,11 +143,7 @@
                       <span ng-show="ethForm.dns.$invalid">Wrong dns  address!</span>
                     </div>
                   </div>
-                  </div>
-                </div>
-              <div class="form-horizontal">
-
-                <div class="form-group">
+                  <div class="form-group">
                   <label  class="col-sm-4 control-label text-light hidden-xs">&nbsp;</label>
                   <div class="col-sm-8">
                     <input class="btn btn-default" type="submit" ng-click="reset()" value="reset" />
@@ -143,12 +151,17 @@
                   </div>
 
               </div>
-              </div>
+                  </div>
+                </div>
               </form>
             </div>
+            </div>
           </div>
-          <hr class="mt-40 mb-40" />
-
+    </div>
+    <div class="col-sm-4">
+      <!-- <hr class="visible-xs" /> -->
+      <div class="panel panel-default">
+        <div class="panel-body">
           <div ng-show="status.network.wifiNetworks.length">
             <div class="row mb-20">
               <div class="col-sm-8">
@@ -207,14 +220,19 @@
             </div>
           </div>
         </div>
-        <hr class="visible-xs" />
-        <div ng-if="online==2" class="col-md-5 col-md-offset-1">
+      </div>
+    </div>
+    <div class="col-sm-4">
+     <!--  <hr class="visible-xs" /> -->
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div ng-if="online==2">
           <h3 class="m-none mb-20">Your <strong>Account</strong></h3>
           <p>Coonect device with Your meven.it account.</p>
           <a class="btn btn-primary" href="/#/connect"><i class="icon-user mr-5"></i>Connect Your account</a>
         </div>
-        <!-- <hr class="visible-xs mt-40" /> -->
-      </div>
+          </div>
+        </div>
     </div>
   </div>
 </div>
