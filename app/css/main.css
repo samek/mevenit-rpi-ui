@@ -246,7 +246,57 @@ fieldset[disabled] .i-checks input + i:before {
 	margin-bottom: 8px;
 }
 
+.ng-valid {
+  border-color: #00af3f !important;
+  color: #00af3f !important;
+}
+.ng-invalid {
+  border-color: #ff5500 !important;
+  color: #ff5500 !important;
+}
+.ng-untouched {
+  border-color: #ccc !important;
+  color: #999 !important;
+}
 
 
 
-
+.msg {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px 30px;
+  background-color: #fff;
+  color: #555;
+  font-weight: 300;
+  font-size: 24px;
+  display: none;
+  -webkit-box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.1);
+}
+.msg.msg-default {
+  text-align: center;
+  display: block;
+}
+.msg.msg-alert {
+  display: block;
+  background-color: #ff5500;
+  color: #fff;
+}
+.msg.msg-alert .btn,
+.msg.msg-alert .btn:active,
+.msg.msg-alert .btn:focus,
+.msg.msg-alert .btn:visited {
+  border: 1px solid rgba(255,255,255,0.4);
+  color: #fff;
+}
+.msg.msg-alert .btn:hover {
+  border: 1px solid rgba(255,255,255,1);
+  color: #fff;
+}
+.loader {
+  font-size: 100px;
+  margin: 40px 0;
+}
