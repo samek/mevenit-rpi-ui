@@ -9,7 +9,10 @@
  */
 
 var mevenBoxControllers = angular.module('mevenBoxControllers', []);
-var hostname="http://10.0.1.3:8000";
+//console.log(location.hostname);
+var hostname="http://"+location.hostname+":8000";
+//console.log(hostname);
+//console.log(location.host);
 //var hostname='http://private-38c7f8-mevenbox.apiary-mock.com';
 mevenBoxControllers.controller('MainCtrl', ['$scope', '$http','$interval','$window',
     function($scope, $http,$interval,$window) {
